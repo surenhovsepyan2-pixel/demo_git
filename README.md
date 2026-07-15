@@ -1,4 +1,5 @@
 # demo_git
+```python
 def draw(diag, fill):
     for i in range(5):
         for j in range(5):
@@ -10,3 +11,4 @@ def draw(diag, fill):
 diag = input()
 fill = input()
 draw(diag, fill)
+```
