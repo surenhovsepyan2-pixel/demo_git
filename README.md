@@ -1,2 +1,12 @@
 # demo_git
-12n1212  12  2 r  f v d v dfv df vd
+def draw(diag, fill):
+    for i in range(5):
+        for j in range(5):
+            if i == j or i + j == 4:
+                print(diag, end = "")
+            else:
+                print(fill, end = "")
+        print()
+diag = input()
+fill = input()
+draw(diag, fill)
