@@ -8,4 +8,4 @@ for i in tesakner:
             m += 1
     b[i] = m
 print(b)
-#text
+
