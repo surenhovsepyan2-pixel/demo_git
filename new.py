@@ -10,10 +10,10 @@ if FILE.exists():
 else:
     passwords = []
 
-tver = [1,2,3,4,5,6,7,8,9,0]
+tver = ["1","2","3","4","5","6","7","8","9","0"]
 nshanner = ["=","+","-","!","@","#","$","%","&","*"]
-uppercase_letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-lowercase_letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+uppercase_letters = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+lowercase_letters = list("abcdefghijklmnopqrstuvwxyz")
 
 
 def password_generator():
@@ -24,7 +24,8 @@ def password_generator():
         password.append(random.choice(uppercase_letters))
         password.append(random.choice(lowercase_letters))
 
-    return password
+    return "".join(password)
+    
 password = password_generator()
 
 while password in passwords:
