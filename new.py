@@ -2,7 +2,7 @@ import random
 import json
 from pathlib import Path
 
-FILE = Path("passwords.json")
+FILE = Path(__file__).parent / "passwords.json"
 
 if FILE.exists():
     with open(FILE, "r") as f:
@@ -28,12 +28,15 @@ def password_generator():
 password = password_generator()
 
 while password in passwords:
-    password_generator()
+    password = password_generator()
 
 passwords.append(password)
 
 with open(FILE, "w") as f:
     json.dump(passwords, f, indent=4)
+
+print(FILE.absolute())
+
 
 
 
